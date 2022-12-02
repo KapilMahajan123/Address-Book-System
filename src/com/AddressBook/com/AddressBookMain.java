@@ -19,12 +19,12 @@ public class AddressBookMain {
         /**
          * Enter number 1 to add this contacts details
          * Enter number 2 to displaying contact details
+         * Enter number 3 to Editing contacts details
          */
 		do {
-			System.out.println(" 1. Add Contact \n 2. Display contact \n");
-			System.out.println("~Enter the  Number~: ");
-
-			Number = scanner.nextInt();    //
+			System.out.println(" 1. Add Contact \n2. Display contact \n3.EDIT CONTACT");
+			System.out.println("~Enter the Number~: ");
+			Number = scanner.nextInt();
 
 			switch (Number) {
 
@@ -34,12 +34,15 @@ public class AddressBookMain {
 			case 2:
 				addressBook.showContacts();
 				break;
+			case 3:
+				addressBook.editContact();
+				break;	
 			default:
 				System.out.println(" !!!Invalid Input!!! ");
 				break;
 
 			}
-		} while (Number != 3);   //calling
+		} while (Number < 4);   //calling
 	}
 
 }
