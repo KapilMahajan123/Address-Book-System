@@ -8,28 +8,28 @@ import java.util.Scanner;
  *
  */
 public class AddressBook {
-	Scanner sc = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 	
 	ContactPerson contact = new ContactPerson();   //create a ContactPerson object
 	
 	//Add contacts
 	public void addContact() {
 		System.out.println("Enter your FirstName: ");
-		contact.setFirstName(sc.next());
+		contact.setFirstName(scanner.next());
 		System.out.println("Enter your LastName: ");
-		contact.setLastName(sc.next());
+		contact.setLastName(scanner.next());
 		System.out.println("Enter your Email: ");
-		contact.setEmail(sc.next());
+		contact.setEmail(scanner.next());
 		System.out.println("Enter your Address: ");
-		contact.setAddress(sc.next());
+		contact.setAddress(scanner.next());
 		System.out.println("Enter your City: ");
-		contact.setCity(sc.next());
+		contact.setCity(scanner.next());
 		System.out.println("Enter your State: ");
-		contact.setState(sc.next());
+		contact.setState(scanner.next());
 		System.out.println("Enter your Zipcode: ");
-		contact.setZip(sc.nextInt());
+		contact.setZip(scanner.nextInt());
 		System.out.println("Enter your Mobile Number: ");
-		contact.setMobile(sc.nextLong());
+		contact.setMobile(scanner.nextLong());
 	}
 
 	public void showContacts() {
