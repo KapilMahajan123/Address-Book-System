@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class AddressBook {
 	
 	//Creating instance object
-	Scanner sc = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 	ContactPerson contact = new ContactPerson();
 	ArrayList<ContactPerson> contactsArrayList = new ArrayList<ContactPerson>();
 	
@@ -22,21 +22,21 @@ public class AddressBook {
 		ContactPerson contact = new ContactPerson();
 		
 		System.out.println("Enter your FirstName: ");
-		contact.setFirstName(sc.next());
+		contact.setFirstName(scanner.next());
 		System.out.println("Enter your LastName: ");
-		contact.setLastName(sc.next());
+		contact.setLastName(scanner.next());
 		System.out.println("Enter your Email: ");
-		contact.setEmail(sc.next());
+		contact.setEmail(scanner.next());
 		System.out.println("Enter your Address: ");
-		contact.setAddress(sc.next());
+		contact.setAddress(scanner.next());
 		System.out.println("Enter your City: ");
-		contact.setCity(sc.next());
+		contact.setCity(scanner.next());
 		System.out.println("Enter your State: ");
-		contact.setState(sc.next());
+		contact.setState(scanner.next());
 		System.out.println("Enter your Zipcode: ");
-		contact.setZip(sc.nextInt());
+		contact.setZip(scanner.nextInt());
 		System.out.println("Enter your Mobile Number: ");
-		contact.setMobile(sc.nextLong());
+		contact.setMobile(scanner.nextLong());
 		
 		contactsArrayList.add(contact);
 	}
@@ -56,7 +56,7 @@ public class AddressBook {
 		 * Ability to edit existing contact person using their
 		 */
 		System.out.println("Enter the First Name to Edit : ");
-		String FirstName = (sc.next());
+		String FirstName = (scanner.next());
 		boolean IsAvaible = false;
 
 		for (ContactPerson contact : contactsArrayList) {
@@ -64,21 +64,21 @@ public class AddressBook {
 				IsAvaible = true;
 
 				System.out.println("Enter your FirstName: ");
-				contact.setFirstName(sc.next());
+				contact.setFirstName(scanner.next());
 				System.out.println("Enter your LastName: ");
-				contact.setLastName(sc.next());
+				contact.setLastName(scanner.next());
 				System.out.println("Enter your Email: ");
-				contact.setEmail(sc.next());
+				contact.setEmail(scanner.next());
 				System.out.println("Enter your Address: ");
-				contact.setAddress(sc.next());
+				contact.setAddress(scanner.next());
 				System.out.println("Enter your City: ");
-				contact.setCity(sc.next());
+				contact.setCity(scanner.next());
 				System.out.println("Enter your State: ");
-				contact.setState(sc.next());
+				contact.setState(scanner.next());
 				System.out.println("Enter your Zipcode: ");
-				contact.setZip(sc.nextInt());
+				contact.setZip(scanner.nextInt());
 				System.out.println("Enter your Mobile Number: ");
-				contact.setMobile(sc.nextLong());
+				contact.setMobile(scanner.nextLong());
 			}
 		}
 		/*
@@ -89,5 +89,27 @@ public class AddressBook {
 		}
 	
 	}
+	
+	/*
+	 * Ability to delete a person using persons name
+	 */
+	public void deleteContact() {
+		System.out.println("Enter the First Name to Delete: ");
+		String FirstName = (scanner.next());
+		boolean IsAvaible = false;
+
+		for (ContactPerson contact : contactsArrayList) {
+			if (contact.getFirstName().equalsIgnoreCase(FirstName)) {
+				IsAvaible = true;
+				contactsArrayList.remove(contact);
+				System.out.println("!!Deleted!!");
+				break;
+			}
+		}
+		if (IsAvaible == false) {
+			System.out.println("Doesn't exist.");
+		}
+		
+	}	
 
 }
