@@ -46,7 +46,7 @@ public class AddressBookMain {
 				break;
 
 			}
-		} while (Number < 4);   //calling
+		} while (Number != 4);   //calling
 	}
 
 }
