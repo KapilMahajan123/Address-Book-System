@@ -24,7 +24,7 @@ public class AddressBookMain {
 			System.out.println(" 1. Add Contact \n 2. Display contact \n");
 			System.out.println("~Enter the  Number~: ");
 
-			Number = scanner.nextInt();    //
+			Number = scanner.nextInt();    // reading values from user
 
 			switch (Number) {
 
