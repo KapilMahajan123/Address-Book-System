@@ -15,7 +15,7 @@ public class ContactPerson {
 	private long mobile;
 	
 	ContactPerson(){}
-	//constructor
+	//Parameterized constructor
 	public ContactPerson(String firstName, String lastName, String email, String address, String city, String state,
 			int zip, long mobile) {
 		this.firstName = firstName;
@@ -27,9 +27,8 @@ public class ContactPerson {
 		this.zip = zip;
 		this.mobile = mobile;
 	}
-
-	@Override
-	//ContactPerson constructor
+	
+	//calling the parameterized constructor
 	public String toString() {
 		return "ContactPerson [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", address="
 				+ address + ", city=" + city + ", state=" + state + ", zip=" + zip + ", mobile=" + mobile + "]";
